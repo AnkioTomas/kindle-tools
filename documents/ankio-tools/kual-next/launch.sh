@@ -1,13 +1,13 @@
 #!/bin/sh
 # Name: KUAL Next
 # Author: KUAL Next contributors
-# Icon: /mnt/us/kual-next/icon.png
+# Icon: /mnt/us/documents/ankio-tools/kual-next/icon.png
 # DontUseFBInk
 
 set -u
 
 log=${KUAL_NEXT_LOG:-/var/tmp/kual-next.log}
-launcher=${KUAL_NEXT_BINARY:-/mnt/us/kual-next/bin/kual-next}
+launcher=${KUAL_NEXT_BINARY:-/mnt/us/documents/ankio-tools/kual-next/bin/kual-next}
 extensions=${KUAL_NEXT_EXTENSIONS:-}
 return_marker=/var/tmp/kual-next-return-to-koreader
 statusbar_conf=${KUAL_NEXT_STATUSBAR_CONF:-/etc/upstart/statusbar.conf}

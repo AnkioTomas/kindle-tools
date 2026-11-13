@@ -1,7 +1,7 @@
 #!/bin/sh
 # Name: 开启Telnet
 # Author: Ankio
-# Icon: /mnt/us/script-icons/start_telnet.png
+# Icon: /mnt/us/documents/ankio-tools/icons/start_telnet.png
 # DontUseFBInk
 PATH=/bin:/sbin:/usr/bin:/usr/sbin
 CHAIN=ANKIO_TELNET

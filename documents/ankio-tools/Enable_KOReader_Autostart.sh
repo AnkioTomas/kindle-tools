@@ -1,7 +1,7 @@
 #!/bin/sh
 # Name: 开启KOReader自启动
 # Author: Ankio
-# Icon: /mnt/us/script-icons/enable_koreader_autostart.png
+# Icon: /mnt/us/documents/ankio-tools/icons/enable_koreader_autostart.png
 # DontUseFBInk
 say() { printf '%s\n' "$1"; command -v eips >/dev/null 2>&1 && eips 1 22 "$1" >/dev/null 2>&1; sleep 4; }
 end() { ro; say "$1"; exit 0; }
@@ -16,7 +16,7 @@ ro() { [ "$RW" = 1 ] || return 0; if "$MR" ro; then RW=0; else printf '%s\n' "�
 [ -L "$DEST" ] && end "失败: 符号链接 worker, 未改"
 [ -e "$DEST" ] && [ ! -f "$DEST" ] && end "失败: 非普通文件 worker, 未改"
 SRC=
-for c in /mnt/us/documents/koreader_autostart_worker.sh "$DEST"; do
+for c in /mnt/us/documents/ankio-tools/koreader_autostart_worker.sh "$DEST"; do
 	[ -L "$c" ] && continue
 	[ -f "$c" ] && [ -r "$c" ] && SRC=$c && break
 done
