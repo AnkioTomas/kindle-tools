@@ -57,8 +57,26 @@
       ]
     },
     {
-      "name": "KOReader 自启动",
+      "name": "锁屏广告",
       "priority": 40,
+      "items": [
+        {
+          "name": "清理锁屏广告",
+          "priority": 10,
+          "action": "./Clean_Lockscreen_Ads.sh",
+          "exitmenu": true
+        },
+        {
+          "name": "恢复锁屏广告",
+          "priority": 20,
+          "action": "./Restore_Lockscreen_Ads.sh",
+          "exitmenu": true
+        }
+      ]
+    },
+    {
+      "name": "KOReader 自启动",
+      "priority": 50,
       "items": [
         {
           "name": "开启自启动",
@@ -76,7 +94,7 @@
     },
     {
       "name": "Telnet",
-      "priority": 50,
+      "priority": 60,
       "items": [
         {
           "name": "启动 Telnet",

@@ -17,6 +17,11 @@ en_text() {
 		*koreader.sh*) echo "koreader.sh not found, nothing changed" ;;
 		*otaupd*) echo "OTA binaries not found, nothing changed" ;;
 		*符号链接*|*非普通文件*) echo "Unexpected file type, nothing changed" ;;
+		*已清理锁屏广告*) echo "Lockscreen ads cleaned and blocked. Reboot to apply" ;;
+		*已取消广告拦截*) echo "Ad blocking removed. Reboot to apply" ;;
+		*已是未拦截状态*) echo "Ads were not blocked, nothing changed" ;;
+		*已是清理状态*) echo "Ads were already cleaned" ;;
+		*广告*) echo "Ad cleanup failed, nothing changed" ;;
 		*已关闭自启动*) echo "KOReader autostart disabled" ;;
 		*已安装自启动*) echo "KOReader autostart installed. Reboot to apply" ;;
 		*已恢复自动更新*) echo "Auto update restored. Reboot to apply" ;;

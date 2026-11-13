@@ -6,6 +6,16 @@
 
 <img src="preview.png" alt="预览" width="360">
 
+## 功能
+
+- **KOReader 启动**：从菜单启动 KOReader，可选保留或不保留原生框架
+- **状态与诊断**：生成可读的状态报告和诊断信息，方便排查问题
+- **自动更新开关**：禁用 / 恢复系统自动更新（OTA）
+- **KOReader 自启动**：开机自动进入 KOReader，可随时关闭
+- **清理锁屏广告**：清除特价版（Special Offers）机型的锁屏广告缓存并阻止再次下载，可恢复
+- **Telnet**：临时开启 / 关闭 Telnet，用于调试
+- 书库里只有一个入口，所有功能在分组中文菜单里，每次操作后屏幕都有结果提示
+
 ## 适用版本
 
 - 设备：已越狱、能从 `documents` 运行 `.sh` 脚本的 Kindle；启动器为 `kindlehf`（ARM 硬浮点）构建，适用于使用 hf 固件的较新机型（大致为 Paperwhite 4 / 10 代及之后）。更老的 soft-float 机型不适用。
@@ -29,6 +39,7 @@
 - 状态与诊断 — 状态与日志报告写到 `/mnt/us/kindle-diagnostics/status-latest.txt`（MTP 可看），同时写入 KUAL 日志 `/var/tmp/kual-next.log`；在菜单底部 KUAL 项选 Save and reset KUAL log 可存成书库里的 `KUAL-*.txt`。另有运行诊断
 - 自动更新 — 禁用 / 恢复
 - KOReader 自启动 — 开启 / 关闭
+- 锁屏广告 — 清理 / 恢复
 - Telnet — 启动 / 停止
 
 KOReader 启动：不重装。若 `koreader.sh` 不存在则不启动；若已在运行则不重复启动。菜单用 exitmenu 只登记白名单动作，等官方 `launch.sh` 完成框架恢复后再启动，避免和 KUAL Next 抢框架导致白屏。未在本机 PW12 / 5.20.2.0.1 实测。
@@ -38,6 +49,10 @@ KOReader 启动：不重装。若 `koreader.sh` 不存在则不启动；若已�
 ## 执行反馈
 
 每个动作结束后，屏幕底部会停留约 6 秒的结果框（[ DONE ] / [ FAILED ] 加英文说明，因 eips 无法显示汉字），完整中文结果写入 `/mnt/us/ankio-tools/last-result.txt`。
+
+## 锁屏广告
+
+清理方式：把 `/mnt/us/system/.assets`（广告缓存）清空，并换成同名的空文件，系统就无法再往里写广告；恢复则删除这个空文件。操作后请重启。只对带广告的特价版机型有效，且不保证所有固件都能彻底去除，未在实机验证。
 
 ## Telnet 与更新
 
