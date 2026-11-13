@@ -5,3 +5,5 @@ sha256: 7f09c06d34273663cc30276c8deeb742922bad788f17446038344629369bd58c
 binary sha256: 49a7e41c576160cb7a2b8993c46d5a00c5f9df99a33c865db57324ac94e40283
 static inspect: ELF32 ARM EABI5 hard-float, no PT_INTERP, no DT_NEEDED (static)
 Do not execute this binary on the build host or the user's device from this packager.
+
+fonts/NotoSans.ttf is replaced by a subset of Noto Sans CJK SC (SIL OFL 1.1, https://github.com/notofonts/noto-cjk) covering ASCII and the menu text, so Chinese labels render. Re-subset with pyftsubset when menu text changes.

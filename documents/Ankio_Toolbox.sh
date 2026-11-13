@@ -39,7 +39,7 @@ run_koreader() {
 # The prebuilt binary loads fonts from this fixed path.
 FONT_DIR=/mnt/us/kual-next/fonts
 for f in NotoSans.ttf NotoSansSymbols.ttf NotoSansSymbols2-Regular.otf; do
-	[ -s "$FONT_DIR/$f" ] && continue
+	cmp -s "$FONT_DIR/$f" /mnt/us/ankio-tools/kual-next/fonts/"$f" && continue
 	mkdir -p "$FONT_DIR" && cp /mnt/us/ankio-tools/kual-next/fonts/"$f" "$FONT_DIR/$f" || end "fail: cannot install font $f"
 done
 rm -f "$PENDING"
