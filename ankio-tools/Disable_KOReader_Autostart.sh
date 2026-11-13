@@ -3,7 +3,7 @@
 # Author: Ankio
 # Icon: /mnt/us/ankio-tools/icons/disable_koreader_autostart.png
 # DontUseFBInk
-say() { printf '%s\n' "$1"; command -v eips >/dev/null 2>&1 && eips 1 22 "$1" >/dev/null 2>&1; sleep 4; }
+. /mnt/us/ankio-tools/lib.sh
 end() { say "$1"; exit 0; }
 FLAG=/mnt/us/DISABLE_KOREADER_AUTOSTART
 if [ -f "$FLAG" ]; then

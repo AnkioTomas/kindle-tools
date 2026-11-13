@@ -4,7 +4,7 @@
 # Icon: /mnt/us/ankio-tools/icons/diagnostics.png
 # DontUseFBInk
 PATH=/bin:/sbin:/usr/bin:/usr/sbin
-say() { printf '%s\n' "$1"; command -v eips >/dev/null 2>&1 && eips 1 22 "$1" >/dev/null 2>&1; sleep 4; }
+. /mnt/us/ankio-tools/lib.sh
 end() { say "$1"; exit 0; }
 DIR=/mnt/us/kindle-diagnostics
 # Read-only diagnostics: write report only. Do not run other scripts, repair, or reboot.

@@ -192,4 +192,6 @@ if [ -s "$TMP" ]; then
 	cat "$TMP" >&2
 fi
 rm -f "$TMP"
+. /mnt/us/ankio-tools/lib.sh
+say "状态报告已保存: $LATEST"
 exit 0

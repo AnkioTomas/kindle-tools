@@ -6,7 +6,7 @@
 PATH=/bin:/sbin:/usr/bin:/usr/sbin
 CHAIN=ANKIO_TELNET
 MARK=ANKIO_TELNET_OWN
-say() { printf '%s\n' "$1"; command -v eips >/dev/null 2>&1 && eips 1 22 "$1" >/dev/null 2>&1; sleep 4; }
+. /mnt/us/ankio-tools/lib.sh
 end() { say "$1"; exit 0; }
 [ "$(id -u 2>/dev/null)" = 0 ] || end "fail: need root"
 is_telnetd() {

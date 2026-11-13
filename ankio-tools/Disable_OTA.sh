@@ -3,7 +3,7 @@
 # Author: Ankio
 # Icon: /mnt/us/ankio-tools/icons/disable_ota.png
 # DontUseFBInk
-say() { printf '%s\n' "$1"; command -v eips >/dev/null 2>&1 && eips 1 22 "$1" >/dev/null 2>&1; sleep 4; }
+. /mnt/us/ankio-tools/lib.sh
 end() { say "$1"; exit 0; }
 [ -r /proc/cmdline ] && grep -q androidboot.veritymode /proc/cmdline && end "失败: verity/rootless, 未改"
 MR=$(command -v mntroot 2>/dev/null)

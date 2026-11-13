@@ -33,6 +33,10 @@ KOReader 启动：不重装。若 `koreader.sh` 不存在则不启动；若已�
 
 随包的 KUAL Next、FBInk、jsmn、yxml、Noto 字体分别遵循各自许可证，全文见 `ankio-tools/kual-next/LICENSES/`。
 
+## 执行反馈
+
+每个动作结束后，屏幕底部会停留约 6 秒的结果框（[ DONE ] / [ FAILED ] 加英文说明，因 eips 无法显示汉字），完整中文结果写入 `/mnt/us/ankio-tools/last-result.txt`。
+
 ## Telnet 与更新
 
 Telnet 默认不启用。只建议在可信网络临时使用（无密码、不加密、root）。关闭不保证已建立会话断开。禁用自动更新后请先检查有无已下载包，再手动重启；不能永久阻断。KOReader 自启动安装后请手动重启；白屏时可在存储根目录新建 `DISABLE_KOREADER_AUTOSTART`。
