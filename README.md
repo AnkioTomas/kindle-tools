@@ -22,10 +22,10 @@
 
 ## 菜单（英文）
 
-- Start KOReader — 官方 `koreader.sh --kual`（保留原生框架）
-- Start KOReader (no framework) — 官方 `koreader.sh --kual --framework_stop`
-- View status and logs — 写可读报告到 `/mnt/us/kindle-diagnostics/status-latest.txt`（MTP 可看）。同时写入 KUAL 固定日志 `/var/tmp/kual-next.log`。在菜单底部 KUAL 项里选 Save and reset KUAL log，会把该日志存成书库里的 `KUAL-*.txt`，可当文本打开阅读。
-- Diagnostics / Disable auto update / Restore auto update / Enable or Disable KOReader autostart / Start or Stop Telnet — 与此前相同
+- ▶ KOReader — 官方 `koreader.sh --kual`（保留原生框架）
+- ▶ KOReader · no framework — 官方 `koreader.sh --kual --framework_stop`
+- ◆ Status & Logs — 写可读报告到 `/mnt/us/kindle-diagnostics/status-latest.txt`（MTP 可看）。同时写入 KUAL 固定日志 `/var/tmp/kual-next.log`。在菜单底部 KUAL 项里选 Save and reset KUAL log，会把该日志存成书库里的 `KUAL-*.txt`，可当文本打开阅读。
+- ◆ Diagnostics；● / ○ 开关类：Auto Update On/Off、KOReader Autostart On/Off、Telnet Start/Stop（● 表示开启动作，○ 表示关闭动作）
 
 KOReader 启动：不重装。若 `koreader.sh` 不存在则不启动；若已在运行则不重复启动。菜单用 exitmenu 只登记白名单动作，等官方 `launch.sh` 完成框架恢复后再启动，避免和 KUAL Next 抢框架导致白屏。未在本机 PW12 / 5.20.2.0.1 实测。
 
