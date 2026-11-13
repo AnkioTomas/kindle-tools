@@ -1,7 +1,7 @@
 #!/bin/sh
 # Name: 关闭Telnet
 # Author: Ankio
-# Icon: /mnt/us/documents/ankio-tools/icons/stop_telnet.png
+# Icon: /mnt/us/script-icons/stop_telnet.png
 # DontUseFBInk
 PATH=/bin:/sbin:/usr/bin:/usr/sbin
 CHAIN=ANKIO_TELNET

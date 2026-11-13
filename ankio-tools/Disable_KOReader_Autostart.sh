@@ -1,7 +1,7 @@
 #!/bin/sh
 # Name: 关闭KOReader自启动
 # Author: Ankio
-# Icon: /mnt/us/documents/ankio-tools/icons/disable_koreader_autostart.png
+# Icon: /mnt/us/script-icons/disable_koreader_autostart.png
 # DontUseFBInk
 say() { printf '%s\n' "$1"; command -v eips >/dev/null 2>&1 && eips 1 22 "$1" >/dev/null 2>&1; sleep 4; }
 end() { say "$1"; exit 0; }

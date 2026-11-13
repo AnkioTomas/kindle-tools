@@ -1,13 +1,13 @@
 #!/bin/sh
 # Name: Ankio工具箱
 # Author: Ankio
-# Icon: /mnt/us/documents/ankio-tools/icons/ankio_toolbox.png
+# Icon: /mnt/us/script-icons/ankio_toolbox.png
 # DontUseFBInk
 PATH=/bin:/sbin:/usr/bin:/usr/sbin
 say() { printf '%s\n' "$1"; command -v eips >/dev/null 2>&1 && eips 1 22 "$1" >/dev/null 2>&1; sleep 4; }
 end() { say "$1"; exit 0; }
-BIN=/mnt/us/documents/ankio-tools/kual-next/bin/kual-next
-LAUNCH=/mnt/us/documents/ankio-tools/kual-next/launch.sh
+BIN=/mnt/us/kual-next/bin/kual-next
+LAUNCH=/mnt/us/kual-next/launch.sh
 KR=/mnt/us/koreader/koreader.sh
 PENDING=/var/tmp/ankio-pending-action
 
@@ -35,9 +35,9 @@ run_koreader() {
 
 [ -f "$BIN" ] || end "fail: no kual-next binary"
 [ -f "$LAUNCH" ] || end "fail: no kual-next launch.sh"
-[ -d /mnt/us/documents/ankio-tools ] || end "fail: no ankio-tools menu"
+[ -d /mnt/us/ankio-tools ] || end "fail: no ankio-tools menu"
 rm -f "$PENDING"
-export KUAL_NEXT_EXTENSIONS=/mnt/us/documents/ankio-tools
+export KUAL_NEXT_EXTENSIONS=/mnt/us/ankio-tools
 /bin/sh "$LAUNCH"
 st=$?
 # Official launch.sh exits 125 when framework restoration is incomplete and skips handoff.

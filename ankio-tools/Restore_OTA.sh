@@ -1,7 +1,7 @@
 #!/bin/sh
 # Name: 恢复自动更新
 # Author: Ankio
-# Icon: /mnt/us/documents/ankio-tools/icons/restore_ota.png
+# Icon: /mnt/us/script-icons/restore_ota.png
 # DontUseFBInk
 say() { printf '%s\n' "$1"; command -v eips >/dev/null 2>&1 && eips 1 22 "$1" >/dev/null 2>&1; sleep 4; }
 end() { say "$1"; exit 0; }
