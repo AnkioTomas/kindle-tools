@@ -3,64 +3,94 @@
     {
       "name": "▶  KOReader",
       "priority": 10,
-      "action": "./handoff_koreader.sh",
-      "params": "normal",
-      "exitmenu": true
+      "items": [
+        {
+          "name": "Start",
+          "priority": 10,
+          "action": "./handoff_koreader.sh",
+          "params": "normal",
+          "exitmenu": true
+        },
+        {
+          "name": "Start (no framework)",
+          "priority": 20,
+          "action": "./handoff_koreader.sh",
+          "params": "nofw",
+          "exitmenu": true
+        }
+      ]
     },
     {
-      "name": "▶  KOReader  ·  no framework",
+      "name": "◆  Status & Diagnostics",
       "priority": 20,
-      "action": "./handoff_koreader.sh",
-      "params": "nofw",
-      "exitmenu": true
+      "items": [
+        {
+          "name": "View status and logs",
+          "priority": 10,
+          "action": "./Show_Status.sh",
+          "exitmenu": false
+        },
+        {
+          "name": "Run diagnostics",
+          "priority": 20,
+          "action": "./Kindle_Diagnostics.sh",
+          "exitmenu": true
+        }
+      ]
     },
     {
-      "name": "◆  Status & Logs",
+      "name": "●  Auto Update",
       "priority": 30,
-      "action": "./Show_Status.sh",
-      "exitmenu": false
+      "items": [
+        {
+          "name": "Disable auto update",
+          "priority": 10,
+          "action": "./Disable_OTA.sh",
+          "exitmenu": true
+        },
+        {
+          "name": "Restore auto update",
+          "priority": 20,
+          "action": "./Restore_OTA.sh",
+          "exitmenu": true
+        }
+      ]
     },
     {
-      "name": "◆  Diagnostics",
+      "name": "■  KOReader Autostart",
       "priority": 40,
-      "action": "./Kindle_Diagnostics.sh",
-      "exitmenu": true
+      "items": [
+        {
+          "name": "Enable autostart",
+          "priority": 10,
+          "action": "./Enable_KOReader_Autostart.sh",
+          "exitmenu": true
+        },
+        {
+          "name": "Disable autostart",
+          "priority": 20,
+          "action": "./Disable_KOReader_Autostart.sh",
+          "exitmenu": true
+        }
+      ]
     },
     {
-      "name": "○  Auto Update: Turn Off",
+      "name": "▲  Telnet",
       "priority": 50,
-      "action": "./Disable_OTA.sh",
-      "exitmenu": true
-    },
-    {
-      "name": "●  Auto Update: Turn On",
-      "priority": 60,
-      "action": "./Restore_OTA.sh",
-      "exitmenu": true
-    },
-    {
-      "name": "●  KOReader Autostart: On",
-      "priority": 70,
-      "action": "./Enable_KOReader_Autostart.sh",
-      "exitmenu": true
-    },
-    {
-      "name": "○  KOReader Autostart: Off",
-      "priority": 80,
-      "action": "./Disable_KOReader_Autostart.sh",
-      "exitmenu": true
-    },
-    {
-      "name": "●  Telnet: Start",
-      "priority": 90,
-      "action": "./Start_Telnet.sh",
-      "exitmenu": true
-    },
-    {
-      "name": "○  Telnet: Stop",
-      "priority": 100,
-      "action": "./Stop_Telnet.sh",
-      "exitmenu": true
+      "items": [
+        {
+          "name": "Start Telnet",
+          "priority": 10,
+          "action": "./Start_Telnet.sh",
+          "exitmenu": true
+        },
+        {
+          "name": "Stop Telnet",
+          "priority": 20,
+          "action": "./Stop_Telnet.sh",
+          "exitmenu": true
+        }
+      ]
     }
   ]
 }
