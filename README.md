@@ -2,23 +2,20 @@
 
 作者：Ankio
 
-书库里只会看到一个入口：**Ankio工具箱**。功能脚本在 `/mnt/us/ankio-tools/`，不会作为图书出现。KOReader 自启动 worker 仍在 `/mnt/us/koreader/`。
+书库里只会看到一个入口：**Ankio工具箱**。其余文件都在 `/mnt/us/ankio-tools/`，不会作为图书出现。
 
 ![预览](preview.png)
 
 ## 目录结构
 
-- `documents/Ankio_Toolbox.sh` — 书库里的唯一入口
-- `ankio-tools/` — 菜单（`menu.json`、`config.xml`、`KUAL.cfg`）与各功能脚本
-- `kual-next/` — 菜单启动器 [KUAL Next](https://github.com/thiagokokada/kual-next) 0.3.0（kindlehf）及字体、许可证，来源见 `kual-next/SOURCE.txt`
-- `koreader/` — KOReader 自启动 worker
-- `script-icons/` — 脚本图标
+- `documents/Ankio_Toolbox.sh` — 书库里的入口
+- `ankio-tools/` — 菜单（`menu.json`、`config.xml`、`KUAL.cfg`）、功能脚本、`koreader_autostart_worker.sh`
+  - `kual-next/` — 菜单启动器 [KUAL Next](https://github.com/thiagokokada/kual-next) 0.3.0（kindlehf）及字体、许可证，来源见 `SOURCE.txt`
+  - `icons/` — 脚本图标
 
 ## 安装（MTP）
 
-解压后，把 `documents`、`ankio-tools`、`kual-next`、`koreader`、`script-icons` 复制到 Kindle 存储根目录（与已有 documents 同级）并合并。不要把整个 `Ankio-Kindle-Tools` 文件夹放进 documents。不要再把官方 `KUAL Next.sh` 拷进 documents。本包不会删除你设备上的已有文件；若书库里还留着以前那些单独的 `.sh`，可自行移走。
-
-弹出后等图书馆刷新，点「Ankio工具箱」。
+解压后，把 `documents`、`ankio-tools` 复制到 Kindle 存储根目录（与已有 documents 同级）并合并。不要把整个 `Ankio-Kindle-Tools` 文件夹放进 documents。不要再把官方 `KUAL Next.sh` 拷进 documents。本包不会删除你设备上的已有文件；若书库里还留着以前那些单独的 `.sh`，可自行移走。首次打开时入口会把字体复制到 `/mnt/us/kual-next/fonts/`（二进制写死了该路径）。弹出后等图书馆刷新，点「Ankio工具箱」。
 
 ## 菜单（英文）
 
@@ -33,7 +30,7 @@ KOReader 启动：不重装。若 `koreader.sh` 不存在则不启动；若已�
 
 ## 许可
 
-随包的 KUAL Next、FBInk、jsmn、yxml、Noto 字体分别遵循各自许可证，全文见 `kual-next/LICENSES/`。
+随包的 KUAL Next、FBInk、jsmn、yxml、Noto 字体分别遵循各自许可证，全文见 `ankio-tools/kual-next/LICENSES/`。
 
 ## Telnet 与更新
 

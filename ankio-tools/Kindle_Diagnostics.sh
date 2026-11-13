@@ -1,7 +1,7 @@
 #!/bin/sh
 # Name: 故障检查
 # Author: Ankio
-# Icon: /mnt/us/script-icons/diagnostics.png
+# Icon: /mnt/us/ankio-tools/icons/diagnostics.png
 # DontUseFBInk
 PATH=/bin:/sbin:/usr/bin:/usr/sbin
 say() { printf '%s\n' "$1"; command -v eips >/dev/null 2>&1 && eips 1 22 "$1" >/dev/null 2>&1; sleep 4; }
