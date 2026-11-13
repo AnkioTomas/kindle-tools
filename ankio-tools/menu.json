@@ -5,14 +5,14 @@
       "priority": 10,
       "items": [
         {
-          "name": "启动",
+          "name": "Start",
           "priority": 10,
           "action": "./handoff_koreader.sh",
           "params": "normal",
           "exitmenu": true
         },
         {
-          "name": "启动（不保留原生框架）",
+          "name": "Start (no framework)",
           "priority": 20,
           "action": "./handoff_koreader.sh",
           "params": "nofw",
@@ -21,17 +21,17 @@
       ]
     },
     {
-      "name": "◆  状态与诊断",
+      "name": "◆  Status & Diagnostics",
       "priority": 20,
       "items": [
         {
-          "name": "查看状态与日志",
+          "name": "View status and logs",
           "priority": 10,
           "action": "./Show_Status.sh",
           "exitmenu": false
         },
         {
-          "name": "运行诊断",
+          "name": "Run diagnostics",
           "priority": 20,
           "action": "./Kindle_Diagnostics.sh",
           "exitmenu": true
@@ -39,17 +39,17 @@
       ]
     },
     {
-      "name": "●  自动更新",
+      "name": "●  Auto Update",
       "priority": 30,
       "items": [
         {
-          "name": "禁用自动更新",
+          "name": "Disable auto update",
           "priority": 10,
           "action": "./Disable_OTA.sh",
           "exitmenu": true
         },
         {
-          "name": "恢复自动更新",
+          "name": "Restore auto update",
           "priority": 20,
           "action": "./Restore_OTA.sh",
           "exitmenu": true
@@ -57,17 +57,17 @@
       ]
     },
     {
-      "name": "■  KOReader 自启动",
+      "name": "■  KOReader Autostart",
       "priority": 40,
       "items": [
         {
-          "name": "开启自启动",
+          "name": "Enable autostart",
           "priority": 10,
           "action": "./Enable_KOReader_Autostart.sh",
           "exitmenu": true
         },
         {
-          "name": "关闭自启动",
+          "name": "Disable autostart",
           "priority": 20,
           "action": "./Disable_KOReader_Autostart.sh",
           "exitmenu": true
@@ -79,13 +79,13 @@
       "priority": 50,
       "items": [
         {
-          "name": "启动 Telnet",
+          "name": "Start Telnet",
           "priority": 10,
           "action": "./Start_Telnet.sh",
           "exitmenu": true
         },
         {
-          "name": "停止 Telnet",
+          "name": "Stop Telnet",
           "priority": 20,
           "action": "./Stop_Telnet.sh",
           "exitmenu": true
