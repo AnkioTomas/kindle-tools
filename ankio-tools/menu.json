@@ -1,18 +1,18 @@
 {
   "items": [
     {
-      "name": "▶  KOReader",
+      "name": "KOReader",
       "priority": 10,
       "items": [
         {
-          "name": "Start",
+          "name": "启动",
           "priority": 10,
           "action": "./handoff_koreader.sh",
           "params": "normal",
           "exitmenu": true
         },
         {
-          "name": "Start (no framework)",
+          "name": "启动（不保留原生框架）",
           "priority": 20,
           "action": "./handoff_koreader.sh",
           "params": "nofw",
@@ -21,17 +21,17 @@
       ]
     },
     {
-      "name": "◆  Status & Diagnostics",
+      "name": "状态与诊断",
       "priority": 20,
       "items": [
         {
-          "name": "View status and logs",
+          "name": "查看状态与日志",
           "priority": 10,
           "action": "./Show_Status.sh",
           "exitmenu": false
         },
         {
-          "name": "Run diagnostics",
+          "name": "运行诊断",
           "priority": 20,
           "action": "./Kindle_Diagnostics.sh",
           "exitmenu": true
@@ -39,17 +39,17 @@
       ]
     },
     {
-      "name": "●  Auto Update",
+      "name": "自动更新",
       "priority": 30,
       "items": [
         {
-          "name": "Disable auto update",
+          "name": "禁用自动更新",
           "priority": 10,
           "action": "./Disable_OTA.sh",
           "exitmenu": true
         },
         {
-          "name": "Restore auto update",
+          "name": "恢复自动更新",
           "priority": 20,
           "action": "./Restore_OTA.sh",
           "exitmenu": true
@@ -57,17 +57,17 @@
       ]
     },
     {
-      "name": "■  KOReader Autostart",
+      "name": "KOReader 自启动",
       "priority": 40,
       "items": [
         {
-          "name": "Enable autostart",
+          "name": "开启自启动",
           "priority": 10,
           "action": "./Enable_KOReader_Autostart.sh",
           "exitmenu": true
         },
         {
-          "name": "Disable autostart",
+          "name": "关闭自启动",
           "priority": 20,
           "action": "./Disable_KOReader_Autostart.sh",
           "exitmenu": true
@@ -75,17 +75,17 @@
       ]
     },
     {
-      "name": "▲  Telnet",
+      "name": "Telnet",
       "priority": 50,
       "items": [
         {
-          "name": "Start Telnet",
+          "name": "启动 Telnet",
           "priority": 10,
           "action": "./Start_Telnet.sh",
           "exitmenu": true
         },
         {
-          "name": "Stop Telnet",
+          "name": "停止 Telnet",
           "priority": 20,
           "action": "./Stop_Telnet.sh",
           "exitmenu": true
