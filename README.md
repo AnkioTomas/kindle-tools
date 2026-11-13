@@ -42,7 +42,7 @@
 2. 再把压缩包里的 `extensions` 文件夹复制到存储根目录（与 KUAL 的 extensions 合并）。
 3. 打开 KUAL，里面会出现「Ankio工具箱」菜单，功能相同。
 
-此方式使用 KUAL 自带的界面，不经过 KUAL Next；KOReader 菜单直接调用 `/mnt/us/koreader/koreader.sh`。未在实机验证。
+此方式使用 KUAL 自带的界面，不经过 KUAL Next；KOReader 菜单直接调用 `/mnt/us/koreader/koreader.sh`。“设备工具”子菜单把自动更新、锁屏广告、自启动和 Telnet 功能集中在一起，避免 KUAL 主菜单项目过多。未在实机验证。
 
 ## 菜单（中文，分组）
 

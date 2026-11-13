@@ -29,6 +29,21 @@ def fix(items):
             i["action"] = "/mnt/us/ankio-tools/" + i["action"][2:]
 d = json.load(open(sys.argv[1]))
 fix(d["items"])
+group_names = {"自动更新", "锁屏广告", "KOReader 自启动", "Telnet"}
+grouped = []
+remaining = []
+for item in d["items"]:
+    if item["name"] in group_names:
+        grouped.append(item)
+    else:
+        remaining.append(item)
+if grouped:
+    remaining.append({
+        "name": "设备工具",
+        "priority": max((item.get("priority", 0) for item in remaining), default=0) + 10,
+        "items": grouped,
+    })
+d["items"] = remaining
 json.dump(d, open(sys.argv[2], "w"), ensure_ascii=False, indent=2)
 PY
 find "$STAGE" \( -name .DS_Store -o -name '._*' \) -delete
