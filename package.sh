@@ -11,7 +11,7 @@ STAGE=$(mktemp -d)
 trap 'rm -rf "$STAGE"' EXIT
 
 mkdir -p "$STAGE/$NAME" "$OUT_DIR"
-cp -R documents ankio-tools README.md "$STAGE/$NAME/"
+cp -R documents ankio-tools README.md LICENSE "$STAGE/$NAME/"
 find "$STAGE" \( -name .DS_Store -o -name '._*' \) -delete
 chmod 755 "$STAGE/$NAME"/documents/*.sh "$STAGE/$NAME"/ankio-tools/*.sh "$STAGE/$NAME"/ankio-tools/kual-next/launch.sh "$STAGE/$NAME"/ankio-tools/kual-next/bin/kual-next
 

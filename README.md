@@ -4,7 +4,13 @@
 
 书库里只会看到一个入口：**Ankio工具箱**。其余文件都在 `/mnt/us/ankio-tools/`，不会作为图书出现。
 
-![预览](preview.png)
+<img src="preview.png" alt="预览" width="360">
+
+## 适用版本
+
+- 设备：已越狱、能从 `documents` 运行 `.sh` 脚本的 Kindle；启动器为 `kindlehf`（ARM 硬浮点）构建，适用于使用 hf 固件的较新机型（大致为 Paperwhite 4 / 10 代及之后）。更老的 soft-float 机型不适用。
+- 已实测：Paperwhite 12 / 固件 5.20.2.0.1。其他机型和固件未测试。
+- 禁用/恢复自动更新、KOReader 自启动需要 `mntroot`，verity/rootless 设备会被脚本拒绝；Telnet 需要 root、`telnetd`、`iptables`；KOReader 相关菜单要求 `/mnt/us/koreader/koreader.sh` 已存在（本包不含 KOReader）。
 
 ## 目录结构
 
@@ -29,10 +35,6 @@ KOReader 启动：不重装。若 `koreader.sh` 不存在则不启动；若已�
 
 菜单为中文：包内的 `NotoSans.ttf` 已换成 Noto Sans CJK SC 的裁剪版（TrueType 轮廓，仅含 ASCII 和菜单用字，约 80KB）；启动器无字体回退，菜单不使用符号图标。以后改菜单文字需重新裁剪字体（见 `SOURCE.txt`）。启动器自带 Sort / Save and reset KUAL log / Quit。
 
-## 许可
-
-随包的 KUAL Next、FBInk、jsmn、yxml、Noto 字体分别遵循各自许可证，全文见 `ankio-tools/kual-next/LICENSES/`。
-
 ## 执行反馈
 
 每个动作结束后，屏幕底部会停留约 6 秒的结果框（[ DONE ] / [ FAILED ] 加英文说明，因 eips 无法显示汉字），完整中文结果写入 `/mnt/us/ankio-tools/last-result.txt`。
@@ -40,3 +42,13 @@ KOReader 启动：不重装。若 `koreader.sh` 不存在则不启动；若已�
 ## Telnet 与更新
 
 Telnet 默认不启用。只建议在可信网络临时使用（无密码、不加密、root）。关闭不保证已建立会话断开。禁用自动更新后请先检查有无已下载包，再手动重启；不能永久阻断。KOReader 自启动安装后请手动重启；白屏时可在存储根目录新建 `DISABLE_KOREADER_AUTOSTART`。
+
+## 打包与发布
+
+本地打包：`./package.sh [输出目录]`，默认输出到 `~/Downloads`。
+
+发布：把 `ankio-tools/config.xml` 里的版本号改好并提交后，打同版本的标签并推送（如版本 `2.0` 对应 `v2.0`），GitHub Actions 会自动打包并创建 Release，附上 zip。标签与版本号不一致时会失败。
+
+## 授权
+
+本项目以 [MIT 协议](LICENSE) 发布。随包的第三方组件（KUAL Next、FBInk、jsmn、yxml、Noto 字体）遵循各自许可证，见 `ankio-tools/kual-next/LICENSES/`。
