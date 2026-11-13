@@ -25,6 +25,7 @@
 ## 目录结构
 
 - `documents/Ankio_Toolbox.sh` — 书库里的入口
+- `extensions/ankio-tools/` — 仅压缩包内有：给 KUAL 用的备用入口（打包时由 `ankio-tools/menu.json` 自动生成）
 - `ankio-tools/` — 菜单（`menu.json`、`config.xml`、`KUAL.cfg`）、功能脚本、`koreader_autostart_worker.sh`
   - `kual-next/` — 菜单启动器 [KUAL Next](https://github.com/thiagokokada/kual-next) 0.3.0（kindlehf）及字体、许可证，来源见 `SOURCE.txt`
   - `icons/` — 脚本图标
@@ -32,6 +33,16 @@
 ## 安装（MTP）
 
 解压后，把 `documents`、`ankio-tools` 复制到 Kindle 存储根目录（与已有 documents 同级）并合并。不要把整个 `Ankio-Kindle-Tools` 文件夹放进 documents。不要再把官方 `KUAL Next.sh` 拷进 documents。本包不会删除你设备上的已有文件；若书库里还留着以前那些单独的 `.sh`，可自行移走。首次打开时入口会把字体复制到 `/mnt/us/kual-next/fonts/`（二进制写死了该路径）。弹出后等图书馆刷新，点「Ankio工具箱」。
+
+### 书库里看不到入口？改用 KUAL
+
+有些已越狱设备（例如 KPW5 / 5.16.2.1.1）装了 KUAL，但书库不会把 `documents` 里的 `.sh` 显示成入口。这种情况下：
+
+1. 照常复制 `ankio-tools` 到存储根目录（不需要 `documents`）。
+2. 再把压缩包里的 `extensions` 文件夹复制到存储根目录（与 KUAL 的 extensions 合并）。
+3. 打开 KUAL，里面会出现「Ankio工具箱」菜单，功能相同。
+
+此方式使用 KUAL 自带的界面，不经过 KUAL Next；KOReader 菜单直接调用 `/mnt/us/koreader/koreader.sh`。未在实机验证。
 
 ## 菜单（中文，分组）
 
