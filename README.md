@@ -78,7 +78,3 @@ Telnet 默认不启用。只建议在可信网络临时使用（无密码、不�
 ## 授权
 
 本项目以 [MIT 协议](LICENSE) 发布。随包的第三方组件（KUAL Next、FBInk、jsmn、yxml、Noto 字体）遵循各自许可证，见 `ankio-tools/kual-next/LICENSES/`。
-
-## 相关项目：月读（moon）
-
-越狱后推荐搭配 KOReader 使用的插件 [月读 moon](https://github.com/AnkioTomas/moon)：纯 Lua 的 KOReader 插件，把书架、在线书源、书城、阅读统计、AI 与 X-Ray 等收进一个桌面。本工具箱负责启动 KOReader，月读负责读书。使用说明见 [moon.ankio.net](https://moon.ankio.net/manual)。
